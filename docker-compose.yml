@@ -1,7 +1,7 @@
 version: '3.8'
 services:
   vault:
-    image: vault
+    image: hashicorp/vault:1.6.2
     container_name: vault
     networks:
       - vault
