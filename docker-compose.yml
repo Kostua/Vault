@@ -1,13 +1,13 @@
 version: '3.8'
 services:
   vault:
-    image: hashicorp/vault:1.6.2
+    image: hashicorp/vault:1.12.2
     container_name: vault
     networks:
       - vault
     ports:
       - "8200:8200"
-    restart: always
+    restart: unless-stopped
     volumes:
       - ./volumes/logs:/vault/logs
       - ./volumes/file:/vault/file
